@@ -15,7 +15,6 @@ export class AppController {
     @Req() req: Request,
     @Res() res: Response,
   ): any {
-    console.log('videoName', videoName);
     const videoPath = path.join(process.cwd(), 'assets', `${videoName}.mp4`);
     const stat = fs.statSync(videoPath);
     const fileSize = stat.size;

@@ -4,7 +4,7 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: process.env.REACT_APP_API_URL,
+    origin: 'http://91.134.88.76',
     methods: 'GET',
     allowedHeaders: 'Content-Type, Accept, Range',
   });
